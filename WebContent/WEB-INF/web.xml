@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>LibraryManagementSystem</display-name>
+
+  
+ <welcome-file-list>
+	<welcome-file>jsp/HomePage.jsp</welcome-file>
+	</welcome-file-list>
+	<display-name>LibraryManagement</display-name>
+	<display-name>LibraryManagementSystem</display-name>
+
+
+	<servlet>
+		<servlet-name>LibrarianController</servlet-name>
+		<servlet-class>com.xoriant.librarymanagement.controller.LibrarianController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LibrarianController</servlet-name>
+		<url-pattern>/librarian</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BookController</servlet-name>
+		<servlet-class>com.xoriant.librarymanagement.controller.BookController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookController</servlet-name>
+		<url-pattern>/BookInfo</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>RequestController</servlet-name>
+		<servlet-class>com.xoriant.librarymanagement.controller.RequestController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RequestController</servlet-name>
+		<url-pattern>/request</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AdministratorController</servlet-name>
+		<servlet-class>com.xoriant.librarymanagement.controller.AdministratorController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdministratorController</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>UserController</servlet-name>
+		<servlet-class>com.xoriant.librarymanagement.controller.UserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserController</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AdminLogin</servlet-name>
+		<servlet-class>com.xoriant.librarymanagement.controller.AdminLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLogin</servlet-name>
+		<url-pattern>/AdminLogin</url-pattern>
+	</servlet-mapping>
+  
+  
+  
+</web-app>

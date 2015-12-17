@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>title</title>
+<script src="file.js"></script>
+<script>
+function doc(id){return document.getElementById(id);}
+function buildCounty(){
+var opts=doc('county').options;
+for(var i=0;i<arr.length;i++){
+opts[opts.length]=new Option(arr[i][0],arr[i][0]);
+}
+doc('county').onchange=function(){
+this.blur();
+var val=this.value;
+if(!val){return;}
+var co=doc('city').options;
+co.length=1;
+for(var j=0;j<arr.length;j++){
+if(arr[j][0]!==val){continue;}
+else{
+var temp=arr[j][1];
+for(var k=0;k<temp.length;k++){
+co[co.length]=new Option(temp[k],temp[k]);
+}
+break;
+}
+}
+}
+}
+
+window.onload=buildCounty;
+</script>
+</head>
+<body>
+<table align="center" cellspacing="3" cellpadding="3">
+<tr>
+<td>County Name: </td>
+<td><select id="county"><option value="">Select county</option></select></td>
+</tr>
+<tr>
+<td>City: </td>
+<td><select id="city"><option value="">Select city</option></select></td>
+</tr>
+</table>
+</body>
+</html>
